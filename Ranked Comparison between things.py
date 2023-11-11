@@ -201,10 +201,10 @@ def merge_insertion_sort(collection: list[int]) -> list[int]:
 
 
 nums = [4, 3, 5, 1, 2]
-print("\nOriginal list:")
-print(nums)
-print("After applying Merge-insertion Sort the said list becomes:")
-print(merge_insertion_sort(nums))
+#print("\nOriginal list:")
+#print(nums)
+#print("After applying Merge-insertion Sort the said list becomes:")
+#print(merge_insertion_sort(nums))
 
 ##################################################################
 def binary_insert(seq, x, less):
@@ -264,7 +264,7 @@ def count(x,y):
     return x < y
 
 worsts = []
-for m in range(11):
+for m in range(9):
     print(m)
     worst = 0
     for perm in itertools.permutations(range(m)):
@@ -303,7 +303,7 @@ list_len = []
 comparisons = []
 for i in range(1000):
     ll = randint(0,50)
-    list_len.append(10)
+    list_len.append(ll)
     n = []
     for e in range(ll):
         n.append(randint(0,100))
@@ -315,10 +315,10 @@ yt = [(n*(math.log2(3*n/4)) - (2*(math.log2(6*n))/3) + (math.log2(6*n)/2)) for n
 c = [0, 1, 3, 5, 7, 10, 13, 16, 19, 22, 26, 30, 34]
 x = [1,2,3,4,5,6,7,8,9,10,11,12,13]
 plt.plot(x,c, label="wiki theoretical max listed")
-#plt.plot(xs,ys,label="wiki theoretical max aprox")
+plt.plot(xs,ys,label="wiki theoretical max aprox")
 plt.plot(xs, yt, label="wiki theoretical exact")
-#plt.scatter(list_len, comparisons, label="recorded data algo1")
+plt.scatter(list_len, comparisons, label="recorded data algo1")
 plt.plot(worsts, label="worst recorded data algo2")
-#plt.plot(worsts_, label="worst recorded data algo1")
+plt.plot(worsts_, label="worst recorded data algo1")
 plt.legend()
 plt.show()
